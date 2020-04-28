@@ -15,6 +15,7 @@
 			// start - You should remove this code - it is only for evaluate expressions.
 		#include <exception>
 		#include <stdexcept>
+		[&]{
 			try
 			{
 				// write here the code which you want to test for.
@@ -26,8 +27,9 @@
 				__debugbreak();
 			}
 			__debugbreak();
-			// end - You should remove this code - it is only for evaluate expressions.]]>
-			
+			// end - You should remove this code - it is only for evaluate expressions.
+			}();
+			]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>
