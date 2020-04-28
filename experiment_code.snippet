@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Try catch block to run experiments</Title>
+			<Shortcut>experiment</Shortcut>
+			<Description>Try catch block to run experiments</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp"><![CDATA[
+			// start - You should remove this code - it is only for evaluate expressions.
+		#include <exception>
+		#include <stdexcept>
+			try
+			{
+				// write here the code which you want to test for.
+			}
+			catch(...)
+			{
+				auto eptr = std::current_exception();
+				(void)eptr;
+				__debugbreak();
+			}
+			__debugbreak();
+			// end - You should remove this code - it is only for evaluate expressions.]]>
+			
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
